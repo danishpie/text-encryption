@@ -20,8 +20,13 @@ class CaesarCipher:
                 result.append(char)
         return ''.join(result)
     
-caesar = CaesarCipher(3)
-encrypted = caesar.encrypt("Hello Everyone")
-print(encrypted)
-decrypted = caesar.decrypt(encrypted)
-print(decrypted)
+def main():
+    shift = int(input("Enter the shift value: "))
+    caeser = CaesarCipher(shift)
+
+    message = input("Enter message to encrypt: ")
+    encrypted = caeser.encrypt(message)
+    print(f"Encrypted Message: {encrypted}")
+
+if __name__ == "__main__":
+    main()
